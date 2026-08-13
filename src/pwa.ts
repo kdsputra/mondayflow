@@ -4,7 +4,7 @@ let deferredInstall: InstallPromptEvent | null = null;
 
 export function registerPwa() {
   if (!import.meta.env.PROD || !("serviceWorker" in navigator)) return;
-  window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => undefined));
+  window.addEventListener("load", () => navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => undefined));
   window.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault();
     deferredInstall = event as InstallPromptEvent;

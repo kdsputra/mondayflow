@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  base: "./",
   plugins: [
     react(),
     VitePWA({
@@ -11,7 +12,7 @@ export default defineConfig({
       manifest: false,
       workbox: {
         globPatterns: ["**/*.{html,js,css,svg,webmanifest}"],
-        navigateFallback: "/index.html",
+        navigateFallback: "index.html",
         navigateFallbackDenylist: [/^\/functions\//],
         cleanupOutdatedCaches: true,
         clientsClaim: true,

@@ -1,5 +1,7 @@
 # MondayFlow
 
+Demo GitHub Pages: `https://kdsputra.github.io/mondayflow/`
+
 MondayFlow adalah aplikasi work management bergaya monday.com. Tahap 0 sampai 7 telah diimplementasikan: fondasi multi-tenant, board builder, automations, integration hub, Docs/Forms/Canvas, kontrol enterprise, PWA/offline, observability, dan backup tersedia dalam satu proyek yang siap masuk GitHub.
 
 ## Cakupan utama
