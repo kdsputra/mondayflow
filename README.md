@@ -81,6 +81,8 @@ Gunakan pengaturan berikut di Vercel, Netlify, Cloudflare Pages, atau hosting st
 - Output directory: `dist`
 - Environment variables: `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY`
 
+Untuk GitHub Pages production, simpan `VITE_SUPABASE_URL` sebagai repository variable dan `VITE_SUPABASE_ANON_KEY` sebagai repository secret. Jangan pernah memakai service-role key sebagai nilai frontend.
+
 Setelah URL produksi tersedia, masukkan URL tersebut ke Site URL dan Redirect URLs di Supabase Auth. Build lokal dapat diperiksa dengan `pnpm build` lalu `pnpm preview`.
 
 PWA memerlukan HTTPS di produksi. Deploy Edge Function `backup-workspace`, isi `BACKUP_CRON_SECRET`, lalu panggil action `scheduled` dari Supabase Cron untuk backup otomatis dan pembersihan arsip kedaluwarsa.

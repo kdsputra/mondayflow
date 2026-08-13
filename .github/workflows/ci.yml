@@ -37,6 +37,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build application
+        env:
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
         run: pnpm build
 
       - name: Upload GitHub Pages artifact
